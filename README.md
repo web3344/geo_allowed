@@ -57,6 +57,4 @@ mvn test
 curl -X POST http://localhost:8080/check-access -d @request.json
 ```
 
-## 许可证
-MIT License
-```
+
