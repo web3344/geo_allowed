@@ -2,8 +2,8 @@ HELP.md
 **/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
-!**/src/test/**/target/
-**/test/
+#!**/src/test/**/target/
+#**/test/
 ### STS ###
 .apt_generated
 .classpath
@@ -19,7 +19,7 @@ HELP.md
 *.iml
 *.ipr
 *.class
-*Test.java
+#*Test.java
 
 
 ### NetBeans ###
