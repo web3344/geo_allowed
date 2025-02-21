@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.wxl.boot.mapper.RegionMapper">
+
+    <select id="findAllowedRegionsByUserId" resultType="com.wxl.boot.pojo.Region">
+        SELECT r.* FROM t_region r
+        INNER JOIN t_user_allowed_region uar ON r.id = uar.region_id
+        WHERE uar.user_id = #{userId}
+    </select>
+
+</mapper>
+
+
