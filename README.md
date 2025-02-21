@@ -13,6 +13,7 @@
 
 ### 1. 数据库配置
 ```sql
+端口8088
 CREATE DATABASE geo_db;
 -- 执行 src/data.sql 初始化数据
 ```
