@@ -4,12 +4,11 @@ import com.wxl.boot.mapper.RegionMapper;
 import com.wxl.boot.pojo.Region;
 import com.wxl.boot.service.IAccesesCheckService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 // AccessCheckService.java
-@Service
+
 @RequiredArgsConstructor
 public class AccessCheckService  implements IAccesesCheckService {
     private final RegionMapper regionMapper;
