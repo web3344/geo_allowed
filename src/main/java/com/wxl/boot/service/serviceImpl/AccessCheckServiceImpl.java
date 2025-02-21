@@ -4,17 +4,20 @@ import com.wxl.boot.mapper.RegionMapper;
 import com.wxl.boot.pojo.Region;
 import com.wxl.boot.service.IAccesesCheckService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// AccessCheckService.java
+// AccessCheckServiceImpl.java
 
+@Service
 @RequiredArgsConstructor
-public class AccessCheckService  implements IAccesesCheckService {
+public class AccessCheckServiceImpl  implements IAccesesCheckService {
     private final RegionMapper regionMapper;
 
     public boolean checkAccess(String userId, String country, String province, String city) {
         List<Region> allowedRegions = regionMapper.findAllowedRegionsByUserId(userId);
+        System.out.println("allowedRegions:"+allowedRegions);
         return allowedRegions.stream().anyMatch(region -> 
             matchesRegion(region, country, province, city));
     }
